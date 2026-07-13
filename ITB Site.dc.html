@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>ITB — Industrial Technology Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #0E0F0D; }
+    body { font-family: 'Archivo', sans-serif; }
+    ::selection { background: #E8A33D; color: #0E0F0D; }
+    a { color: #E8A33D; text-decoration: none; }
+    a:hover { color: #F2C170; }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  </style>
+</helmet>
+
+<div style="background: #0E0F0D; color: #ECEAE4; min-width: 320px;">
+
+  <!-- ============ NAV ============ -->
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 64px; background: rgba(14,15,13,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #26271F;">
+    <div style="display: flex; align-items: baseline; gap: 12px;">
+      <span style="font-weight: 900; font-size: 22px; letter-spacing: -0.5px;">ITB</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; letter-spacing: 1px;">INDUSTRIAL TECHNOLOGY BRIDGE</span>
+    </div>
+    <nav style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500;">
+      <a href="#services" style="color: #B9B7AB;" style-hover="color: #ECEAE4;">Services</a>
+      <a href="#record" style="color: #B9B7AB;" style-hover="color: #ECEAE4;">Track record</a>
+      <a href="#lab" style="color: #B9B7AB;" style-hover="color: #ECEAE4;">Lab</a>
+      <a href="#writing" style="color: #B9B7AB;" style-hover="color: #ECEAE4;">Writing</a>
+      <a href="#contact" style="display: inline-block; padding: 9px 18px; background: #E8A33D; color: #0E0F0D; font-weight: 700; font-size: 13px;" style-hover="background: #F2C170; color: #0E0F0D;">Book a call</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="Hero" style="position: relative; padding: 96px 32px 88px; max-width: 1200px; margin: 0 auto; border-left: 1px solid #26271F; border-right: 1px solid #26271F;">
+    <sc-if value="{{ showAvailability }}" hint-placeholder-val="{{ true }}">
+      <div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8A33D; border: 1px solid #3A3626; padding: 6px 12px; margin-bottom: 36px;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #E8A33D; animation: pulse-dot 2s infinite;"></span>
+        AVAILABLE FOR ENGAGEMENTS — Q3 2026
+      </div>
+    </sc-if>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8A897E; margin-bottom: 20px; letter-spacing: 1px;">QUALITY ENGINEERING × APPLIED AI × INDUSTRY 4.0</div>
+    <h1 style="font-size: clamp(42px, 6.5vw, 80px); font-weight: 900; line-height: 1.02; letter-spacing: -2px; margin: 0 0 28px; max-width: 920px; text-wrap: balance;">Quality systems built for the AI-era factory.</h1>
+    <p style="font-size: 19px; line-height: 1.6; color: #B9B7AB; max-width: 640px; margin: 0 0 40px;">Twelve-plus years of hands-on quality engineering — automotive, mechatronics, electronics fabrication, heavy equipment — now paired with data science, local LLMs, and the infrastructure engineering to run them on the shop floor. Proven systems first. New technology where it earns its place.</p>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="#contact" style="display: inline-block; padding: 15px 30px; background: #E8A33D; color: #0E0F0D; font-weight: 700; font-size: 15px;" style-hover="background: #F2C170; color: #0E0F0D;">Book a discovery call</a>
+      <a href="#services" style="display: inline-block; padding: 15px 30px; border: 1px solid #3B3C33; color: #ECEAE4; font-weight: 600; font-size: 15px;" style-hover="border-color: #E8A33D; color: #ECEAE4;">See what I do</a>
+    </div>
+    <div style="position: absolute; right: 32px; bottom: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4E4F45; text-align: right; line-height: 1.8;">ITB.GURU / EST. 2019<br>REV 3.0 — REFOCUSED 2026</div>
+  </section>
+
+  <!-- ============ INDUSTRY STRIP ============ -->
+  <div style="border-top: 1px solid #26271F; border-bottom: 1px solid #26271F; background: #121310;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; border-left: 1px solid #26271F; border-right: 1px solid #26271F;">
+      <div style="flex: 1 1 140px; padding: 18px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; border-right: 1px solid #26271F; text-align: center; letter-spacing: 1px;">AUTOMOTIVE</div>
+      <div style="flex: 1 1 140px; padding: 18px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; border-right: 1px solid #26271F; text-align: center; letter-spacing: 1px;">MECHATRONICS</div>
+      <div style="flex: 1 1 140px; padding: 18px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; border-right: 1px solid #26271F; text-align: center; letter-spacing: 1px;">ELECTRONICS FAB</div>
+      <div style="flex: 1 1 140px; padding: 18px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; border-right: 1px solid #26271F; text-align: center; letter-spacing: 1px;">HEAVY EQUIPMENT</div>
+      <div style="flex: 1 1 140px; padding: 18px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; text-align: center; letter-spacing: 1px;">MACHINE VISION</div>
+    </div>
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" data-screen-label="Services" style="max-width: 1200px; margin: 0 auto; padding: 88px 32px; border-left: 1px solid #26271F; border-right: 1px solid #26271F;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; letter-spacing: 1px; margin-bottom: 16px;">/ WHAT I DO</div>
+    <h2 style="font-size: 40px; font-weight: 800; letter-spacing: -1px; margin: 0 0 56px; max-width: 700px;">Three ways in. One standard of rigor.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: #26271F; border: 1px solid #26271F;">
+      <div style="background: #121310; padding: 36px 32px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; margin-bottom: 20px;">01</div>
+        <h3 style="font-size: 22px; font-weight: 700; margin: 0 0 16px;">Quality Engineering, done right</h3>
+        <p style="font-size: 15px; line-height: 1.65; color: #B9B7AB; margin: 0 0 20px;">The core discipline: supplier &amp; vendor quality, NPI launches, root-cause investigation, QMS design and audits, continuous improvement. Twelve years across regulated, high-stakes manufacturing.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">SUPPLIER QUALITY</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">NPI</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">ROOT CAUSE</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">QMS / AUDIT</span>
+        </div>
+      </div>
+      <div style="background: #121310; padding: 36px 32px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; margin-bottom: 20px;">02</div>
+        <h3 style="font-size: 22px; font-weight: 700; margin: 0 0 16px;">AI-augmented quality workflows</h3>
+        <p style="font-size: 15px; line-height: 1.65; color: #B9B7AB; margin: 0 0 20px;">Practical AI where it pays for itself: RAG systems over your technical documentation, local LLMs for audit prep and reporting, faster data analysis. Runs on-prem — your process data never leaves the building.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">RAG / LOCAL LLM</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">FMEA / 8D</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">DATA ANALYSIS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">AUTOMATION</span>
+        </div>
+      </div>
+      <div style="background: #121310; padding: 36px 32px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; margin-bottom: 20px;">03</div>
+        <h3 style="font-size: 22px; font-weight: 700; margin: 0 0 16px;">Industry 4.0 readiness</h3>
+        <p style="font-size: 15px; line-height: 1.65; color: #B9B7AB; margin: 0 0 20px;">Getting quality data out of binders and into systems: digitalized inspection records, dashboards, vision-inspection pilots, additive manufacturing feasibility. Scoped pilots before big bets.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">DIGITALIZATION</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">DASHBOARDS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">VISION PILOTS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; border: 1px solid #3B3C33; padding: 4px 8px;">ADDITIVE MFG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRACK RECORD ============ -->
+  <section id="record" data-screen-label="Track record" style="border-top: 1px solid #26271F; background: #121310;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 32px; border-left: 1px solid #26271F; border-right: 1px solid #26271F; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; letter-spacing: 1px; margin-bottom: 16px;">/ TRACK RECORD</div>
+        <h2 style="font-size: 36px; font-weight: 800; letter-spacing: -1px; margin: 0 0 24px;">Alexander Feht</h2>
+        <p style="font-size: 16px; line-height: 1.7; color: #B9B7AB; margin: 0 0 20px;">Senior Vendor Quality Engineering Specialist with 12+ years in the field — currently leading vendor quality at a machine-vision manufacturer, previously quality engineering roles across automotive, robotics, and electronics fabrication.</p>
+        <p style="font-size: 16px; line-height: 1.7; color: #B9B7AB; margin: 0;">Alongside the day job: an R&amp;D lead on metal additive manufacturing feasibility, mixed-reality training development, and building RAG systems and local-LLM tooling for real quality workflows — backed by a DevOps/infrastructure background (ASQ-CQE, UofT DSI AI/ML). The through-line is the same — bridging proven quality systems and the technology that comes next.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #26271F; border: 1px solid #26271F; align-self: start;">
+        <div style="background: #0E0F0D; padding: 28px 24px;">
+          <div style="font-size: 40px; font-weight: 900; color: #E8A33D; letter-spacing: -1px;">12+</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; letter-spacing: 1px; margin-top: 6px;">YEARS IN QUALITY ENGINEERING</div>
+        </div>
+        <div style="background: #0E0F0D; padding: 28px 24px;">
+          <div style="font-size: 40px; font-weight: 900; color: #E8A33D; letter-spacing: -1px;">6</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; letter-spacing: 1px; margin-top: 6px;">INDUSTRIES SERVED</div>
+        </div>
+        <div style="background: #0E0F0D; padding: 28px 24px;">
+          <div style="font-size: 18px; font-weight: 700; color: #ECEAE4; line-height: 1.4;">ASQ-CQE</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; letter-spacing: 1px; margin-top: 6px;">+ UOFT DSI AI/ML CERTIFICATE</div>
+        </div>
+        <div style="background: #0E0F0D; padding: 28px 24px;">
+          <div style="font-size: 18px; font-weight: 700; color: #ECEAE4; line-height: 1.4;">NPI → EOL</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A897E; letter-spacing: 1px; margin-top: 6px;">FULL LIFECYCLE COVERAGE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LAB ============ -->
+  <sc-if value="{{ showLab }}" hint-placeholder-val="{{ true }}">
+    <section id="lab" data-screen-label="Lab" style="border-top: 1px solid #26271F;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 88px 32px; border-left: 1px solid #26271F; border-right: 1px solid #26271F;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; letter-spacing: 1px; margin-bottom: 16px;">/ THE LAB</div>
+        <h2 style="font-size: 36px; font-weight: 800; letter-spacing: -1px; margin: 0 0 16px;">Working experiments, in the open.</h2>
+        <p style="font-size: 16px; line-height: 1.7; color: #B9B7AB; max-width: 620px; margin: 0 0 48px;">Proofs of concept and tooling built to test where AI genuinely helps quality work. Honest about maturity: proofs of concept are labeled as such; the tools run fully local — no cloud required. Full list at <a href="https://github.com/ALEX8642">github.com/ALEX8642</a>.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          <a href="https://github.com/ALEX8642/wafer-defect-classifier" style="display: block; border: 1px solid #26271F; padding: 28px; color: #ECEAE4; background: #121310;" style-hover="border-color: #E8A33D; color: #ECEAE4;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8A33D;">github://wafer-defect-classifier</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #0E0F0D; background: #E8A33D; padding: 3px 8px; font-weight: 600;">POC</span>
+            </div>
+            <div style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Wafer defect classifier</div>
+            <p style="font-size: 14px; line-height: 1.6; color: #8A897E; margin: 0;">ResNet-18 on WM-811K wafer maps — focal loss, CBAM attention, Grad-CAM++ explainability. Macro-F1 0.916 across 9 defect classes. Extended with SimCLR self-supervised pretraining on 638k unlabeled maps (wafer-ssl).</p>
+          </a>
+          <a href="https://github.com/ALEX8642/audio2report" style="display: block; border: 1px solid #26271F; padding: 28px; color: #ECEAE4; background: #121310;" style-hover="border-color: #E8A33D; color: #ECEAE4;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8A33D;">github://audio2report</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #0E0F0D; background: #E8A33D; padding: 3px 8px; font-weight: 600;">TOOL</span>
+            </div>
+            <div style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Audio → audit report</div>
+            <p style="font-size: 14px; line-height: 1.6; color: #8A897E; margin: 0;">Turns dual-microphone meeting recordings into clean, deduplicated transcripts and LLM-generated audit reports. Fully local — no data leaves the building.</p>
+          </a>
+          <a href="https://github.com/ALEX8642/LLM-chatbot" style="display: block; border: 1px solid #26271F; padding: 28px; color: #ECEAE4; background: #121310;" style-hover="border-color: #E8A33D; color: #ECEAE4;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8A33D;">github://LLM-chatbot</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #0E0F0D; background: #E8A33D; padding: 3px 8px; font-weight: 600;">TOOL</span>
+            </div>
+            <div style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">RAG for technical manuals</div>
+            <p style="font-size: 14px; line-height: 1.6; color: #8A897E; margin: 0;">Retrieval-augmented chatbot over technical documentation, built on Haystack 2.x and Ollama. Ask the manual instead of digging through it — runs entirely on local models.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <!-- ============ WRITING ============ -->
+  <sc-if value="{{ showWriting }}" hint-placeholder-val="{{ true }}">
+    <section id="writing" data-screen-label="Writing" style="border-top: 1px solid #26271F; background: #121310;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 88px 32px; border-left: 1px solid #26271F; border-right: 1px solid #26271F;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; letter-spacing: 1px; margin-bottom: 16px;">/ WRITING</div>
+        <h2 style="font-size: 36px; font-weight: 800; letter-spacing: -1px; margin: 0 0 48px;">Notes from the field.</h2>
+        <div style="display: flex; flex-direction: column; border-top: 1px solid #26271F;">
+          <a href="https://itb.guru/2025/09/13/ai-powered-threat-detection-3-ways-it-saves-businesses-money-and-downtime/" style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 24px 8px; border-bottom: 1px solid #26271F; color: #ECEAE4;" style-hover="color: #E8A33D;">
+            <span style="font-size: 18px; font-weight: 600;">AI-powered threat detection: 3 ways it saves money and downtime</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; white-space: nowrap;">SEP 2025</span>
+          </a>
+          <a href="https://itb.guru/2025/09/13/ai-agents-are-changing-the-game-in-cybersecurity-tools/" style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 24px 8px; border-bottom: 1px solid #26271F; color: #ECEAE4;" style-hover="color: #E8A33D;">
+            <span style="font-size: 18px; font-weight: 600;">AI agents are changing the game: chatbots that transform support</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; white-space: nowrap;">SEP 2025</span>
+          </a>
+          <a href="https://itb.guru/2025/09/13/the-cost-of-downtime-why-zero-downtime-is-the-new-standard/" style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 24px 8px; border-bottom: 1px solid #26271F; color: #ECEAE4;" style-hover="color: #E8A33D;">
+            <span style="font-size: 18px; font-weight: 600;">The cost of downtime — why zero downtime is the new standard</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A897E; white-space: nowrap;">SEP 2025</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" data-screen-label="Contact" style="border-top: 1px solid #26271F;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 104px 32px; border-left: 1px solid #26271F; border-right: 1px solid #26271F; text-align: center;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8A33D; letter-spacing: 1px; margin-bottom: 20px;">/ CONTACT</div>
+      <h2 style="font-size: clamp(32px, 5vw, 56px); font-weight: 900; letter-spacing: -1.5px; margin: 0 auto 20px; max-width: 720px; text-wrap: balance;">Got a quality problem technology should be solving?</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: #B9B7AB; max-width: 520px; margin: 0 auto 40px;">Thirty minutes, no pitch. We look at your process, and I tell you honestly what's worth automating — and what isn't.</p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="mailto:alexander@itb.guru" style="display: inline-block; padding: 16px 34px; background: #E8A33D; color: #0E0F0D; font-weight: 700; font-size: 15px;" style-hover="background: #F2C170; color: #0E0F0D;">alexander@itb.guru</a>
+        <a href="https://www.linkedin.com/in/afeht/" style="display: inline-block; padding: 16px 34px; border: 1px solid #3B3C33; color: #ECEAE4; font-weight: 600; font-size: 15px;" style-hover="border-color: #E8A33D; color: #ECEAE4;">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="border-top: 1px solid #26271F; background: #0B0C0A;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 28px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-left: 1px solid #26271F; border-right: 1px solid #26271F;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4E4F45;">© 2026 ITB.GURU — INDUSTRIAL TECHNOLOGY BRIDGE</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4E4F45;">WATERLOO REGION, ONTARIO · REMOTE-FRIENDLY</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAvailability&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sections&quot;}, &quot;showLab&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sections&quot;}, &quot;showWriting&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sections&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showAvailability: this.props.showAvailability ?? true,
+      showLab: this.props.showLab ?? true,
+      showWriting: this.props.showWriting ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>

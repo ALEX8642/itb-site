@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    image: ghcr.io/alex8642/itb-site:latest
+    container_name: itb-site
+    ports:
+      # HTTP only, bound to loopback — the host's nginx reverse proxy
+      # terminates TLS for itb.guru and proxies to this port.
+      - "127.0.0.1:8080:80"
+    restart: unless-stopped

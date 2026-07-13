@@ -1,0 +1,9 @@
+.git/
+.github/
+.gitignore
+ITB Site.dc.html
+README.md
+DEPLOY.md
+docker-compose.yml
+dist/
+.dockerignore

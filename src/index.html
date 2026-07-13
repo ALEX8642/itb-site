@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ITB — Industrial Technology Bridge</title>
+  <meta name="description" content="Quality Engineering × Applied AI × Industry 4.0 consulting. Twelve-plus years of hands-on quality engineering paired with data science, local LLMs, and shop-floor infrastructure. Waterloo Region, Ontario — remote-friendly.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">ITB</span>
+      <span class="brand-sub">INDUSTRIAL TECHNOLOGY BRIDGE</span>
+    </div>
+    <nav class="site-nav">
+      <a href="#services">Services</a>
+      <a href="#record">Track record</a>
+      <!--IF:SHOW_LAB-->
+      <a href="#lab">Lab</a>
+      <!--ENDIF:SHOW_LAB-->
+      <!--IF:SHOW_WRITING-->
+      <a href="#writing">Writing</a>
+      <!--ENDIF:SHOW_WRITING-->
+      <a href="#contact" class="btn-solid">Book a call</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="col hero">
+    <!--IF:SHOW_AVAILABILITY-->
+    <div class="availability">
+      <span class="availability-dot"></span>
+      AVAILABLE FOR ENGAGEMENTS — {{AVAILABILITY_DATE}}
+    </div>
+    <!--ENDIF:SHOW_AVAILABILITY-->
+    <div class="hero-kicker">QUALITY ENGINEERING × APPLIED AI × INDUSTRY 4.0</div>
+    <h1>Quality systems built for the AI-era factory.</h1>
+    <p class="hero-sub">Twelve-plus years of hands-on quality engineering — automotive, mechatronics, electronics fabrication, heavy equipment — now paired with data science, local LLMs, and the infrastructure engineering to run them on the shop floor. Proven systems first. New technology where it earns its place.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-solid">Book a discovery call</a>
+      <a href="#services" class="btn-outline">See what I do</a>
+    </div>
+    <div class="hero-corner">ITB.GURU / EST. 2019<br>REV 3.0 — REFOCUSED 2026</div>
+  </section>
+
+  <!-- ============ INDUSTRY STRIP ============ -->
+  <div class="industry-band">
+    <div class="col industry-strip">
+      <div>AUTOMOTIVE</div>
+      <div>MECHATRONICS</div>
+      <div>ELECTRONICS FAB</div>
+      <div>HEAVY EQUIPMENT</div>
+      <div>MACHINE VISION</div>
+    </div>
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="col section services">
+    <div class="kicker">/ WHAT I DO</div>
+    <h2>Three ways in. One standard of rigor.</h2>
+    <div class="card-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Quality Engineering, done right</h3>
+        <p>The core discipline: supplier &amp; vendor quality, NPI launches, root-cause investigation, QMS design and audits, continuous improvement. Twelve years across regulated, high-stakes manufacturing.</p>
+        <div class="chips">
+          <span>SUPPLIER QUALITY</span>
+          <span>NPI</span>
+          <span>ROOT CAUSE</span>
+          <span>QMS / AUDIT</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>AI-augmented quality workflows</h3>
+        <p>Practical AI where it pays for itself: RAG systems over your technical documentation, local LLMs for audit prep and reporting, faster data analysis. Runs on-prem — your process data never leaves the building.</p>
+        <div class="chips">
+          <span>RAG / LOCAL LLM</span>
+          <span>FMEA / 8D</span>
+          <span>DATA ANALYSIS</span>
+          <span>AUTOMATION</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Industry 4.0 readiness</h3>
+        <p>Getting quality data out of binders and into systems: digitalized inspection records, dashboards, vision-inspection pilots, additive manufacturing feasibility. Scoped pilots before big bets.</p>
+        <div class="chips">
+          <span>DIGITALIZATION</span>
+          <span>DASHBOARDS</span>
+          <span>VISION PILOTS</span>
+          <span>ADDITIVE MFG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRACK RECORD ============ -->
+  <section id="record" class="section-alt">
+    <div class="col section record-grid">
+      <div>
+        <div class="kicker">/ TRACK RECORD</div>
+        <h2>Alexander Feht</h2>
+        <p>Senior Vendor Quality Engineering Specialist with 12+ years in the field — currently leading vendor quality at a machine-vision manufacturer, previously quality engineering roles across automotive, robotics, and electronics fabrication.</p>
+        <p>Alongside the day job: an R&amp;D lead on metal additive manufacturing feasibility, mixed-reality training development, and building RAG systems and local-LLM tooling for real quality workflows — backed by a DevOps/infrastructure background (ASQ-CQE, UofT DSI AI/ML). The through-line is the same — bridging proven quality systems and the technology that comes next.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-big">12+</div>
+          <div class="stat-caption">YEARS IN QUALITY ENGINEERING</div>
+        </div>
+        <div class="stat">
+          <div class="stat-big">6</div>
+          <div class="stat-caption">INDUSTRIES SERVED</div>
+        </div>
+        <div class="stat">
+          <div class="stat-small">ASQ-CQE</div>
+          <div class="stat-caption">+ UOFT DSI AI/ML CERTIFICATE</div>
+        </div>
+        <div class="stat">
+          <div class="stat-small">NPI → EOL</div>
+          <div class="stat-caption">FULL LIFECYCLE COVERAGE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--IF:SHOW_LAB-->
+  <!-- ============ LAB ============ -->
+  <section id="lab" class="section-plain">
+    <div class="col section lab">
+      <div class="kicker">/ THE LAB</div>
+      <h2>Working experiments, in the open.</h2>
+      <p class="lab-intro">Proofs of concept and tooling built to test where AI genuinely helps quality work. Honest about maturity: proofs of concept are labeled as such; the tools run fully local — no cloud required. Full list at <a href="https://github.com/ALEX8642">github.com/ALEX8642</a>.</p>
+      <div class="lab-grid">
+        <a class="lab-card" href="https://github.com/ALEX8642/wafer-defect-classifier">
+          <div class="lab-card-head">
+            <span class="lab-path">github://wafer-defect-classifier</span>
+            <span class="lab-tag">POC</span>
+          </div>
+          <div class="lab-title">Wafer defect classifier</div>
+          <p>ResNet-18 on WM-811K wafer maps — focal loss, CBAM attention, Grad-CAM++ explainability. Macro-F1 0.916 across 9 defect classes. Extended with SimCLR self-supervised pretraining on 638k unlabeled maps (wafer-ssl).</p>
+        </a>
+        <a class="lab-card" href="https://github.com/ALEX8642/audio2report">
+          <div class="lab-card-head">
+            <span class="lab-path">github://audio2report</span>
+            <span class="lab-tag">TOOL</span>
+          </div>
+          <div class="lab-title">Audio → audit report</div>
+          <p>Turns dual-microphone meeting recordings into clean, deduplicated transcripts and LLM-generated audit reports. Fully local — no data leaves the building.</p>
+        </a>
+        <a class="lab-card" href="https://github.com/ALEX8642/LLM-chatbot">
+          <div class="lab-card-head">
+            <span class="lab-path">github://LLM-chatbot</span>
+            <span class="lab-tag">TOOL</span>
+          </div>
+          <div class="lab-title">RAG for technical manuals</div>
+          <p>Retrieval-augmented chatbot over technical documentation, built on Haystack 2.x and Ollama. Ask the manual instead of digging through it — runs entirely on local models.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--ENDIF:SHOW_LAB-->
+
+  <!--IF:SHOW_WRITING-->
+  <!-- ============ WRITING ============ -->
+  <section id="writing" class="section-alt">
+    <div class="col section writing">
+      <div class="kicker">/ WRITING</div>
+      <h2>Notes from the field.</h2>
+      <div class="post-list">
+        <a class="post-row" href="https://itb.guru/2025/09/13/ai-powered-threat-detection-3-ways-it-saves-businesses-money-and-downtime/">
+          <span class="post-title">AI-powered threat detection: 3 ways it saves money and downtime</span>
+          <span class="post-date">SEP 2025</span>
+        </a>
+        <a class="post-row" href="https://itb.guru/2025/09/13/ai-agents-are-changing-the-game-in-cybersecurity-tools/">
+          <span class="post-title">AI agents are changing the game: chatbots that transform support</span>
+          <span class="post-date">SEP 2025</span>
+        </a>
+        <a class="post-row" href="https://itb.guru/2025/09/13/the-cost-of-downtime-why-zero-downtime-is-the-new-standard/">
+          <span class="post-title">The cost of downtime — why zero downtime is the new standard</span>
+          <span class="post-date">SEP 2025</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--ENDIF:SHOW_WRITING-->
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section-plain">
+    <div class="col contact">
+      <div class="kicker">/ CONTACT</div>
+      <h2>Got a quality problem technology should be solving?</h2>
+      <p class="contact-sub">Thirty minutes, no pitch. We look at your process, and I tell you honestly what's worth automating — and what isn't.</p>
+      <div class="contact-ctas">
+        <a href="mailto:alexander@itb.guru" class="btn-solid">alexander@itb.guru</a>
+        <a href="https://www.linkedin.com/in/afeht/" class="btn-outline">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="col">
+      <div>© 2026 ITB.GURU — INDUSTRIAL TECHNOLOGY BRIDGE</div>
+      <div>WATERLOO REGION, ONTARIO · REMOTE-FRIENDLY</div>
+    </div>
+  </footer>
+
+</body>
+</html>
