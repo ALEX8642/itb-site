@@ -60,19 +60,19 @@ domain, those links 404. Either:
 The image is self-contained (fonts self-hosted, no external requests) and
 `linux/amd64`. Two ways to move it:
 
-**Via GHCR (pullable):**
+**Via GHCR (pullable, auto-built):** every push to `main` of
+[github.com/ALEX8642/itb-site](https://github.com/ALEX8642/itb-site) triggers
+a GitHub Actions build that publishes `ghcr.io/alex8642/itb-site:latest`
+(public — no login needed to pull). On the target, use a compose file with
+`image: ghcr.io/alex8642/itb-site:latest` (no `build:`), then:
 
 ```sh
-docker login ghcr.io -u ALEX8642        # PAT with write:packages scope
-docker compose build                    # tags ghcr.io/alex8642/itb-site:latest
-docker push ghcr.io/alex8642/itb-site:latest
+docker compose pull && docker compose up -d
 ```
 
-On the target, use a compose file with `image: ghcr.io/alex8642/itb-site:latest`
-(no `build:`), then `docker compose pull && docker compose up -d`.
-
 Remember: `site.env` toggles are **baked in at build time** — to change them,
-rebuild + re-push from the source checkout, then re-pull.
+edit `site.env`, commit + push to `main`, wait for the Action (~30 s), then
+re-pull on the host.
 
 **Via source:** copy/clone the repo and `docker compose up -d --build` on the
 target — works on any architecture.
